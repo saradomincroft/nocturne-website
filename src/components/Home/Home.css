@@ -1,0 +1,97 @@
+.header-container {
+  margin-bottom: 10%;
+}
+
+.typing-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin-bottom: 5%;
+  padding: 0 10px;
+}
+
+.typing-text {
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.logo-container {
+  position: absolute;
+  width: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  animation: zoomIn 1s forwards, spookyGlow 1.5s 1s infinite alternate; 
+  z-index: 1;
+}
+
+/* Zoom in animation */
+@keyframes zoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Spooky glow animation */
+@keyframes spookyGlow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.3));
+    opacity: 0.9;
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.6));
+    opacity: 1;
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1));
+    opacity: 0.8;
+  }
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+  0% { border-right: 2px solid transparent; }
+  100% { border-right: 2px solid #fff; }
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.link-button {
+  background-color: #FF2400;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 300px;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: #ff6347;
+}
