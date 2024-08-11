@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
-// import ImageSlideIn from '../ImageSlideIn/ImageSlideIn';
 
 export default function Home() {
   const [logoVisible, setLogoVisible] = useState(false);
@@ -29,7 +28,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const typingAnimationDuration = 4000;
+    const typingAnimationDuration = 1200;
 
     const timer = setTimeout(() => {
       setLogoVisible(true);
@@ -51,10 +50,12 @@ export default function Home() {
       )}
     </div>
     <div className="link-container">
-      <a href="#about" className="link-button">About Us</a>
-      <a href="#music" className="link-button">Music</a>
-      <a href="#events" className="link-button">Events</a>
-      <a href="#contact" className="link-button">Contact</a>
+      <a href="#about" className="link-button">CruCast Melbourne | 30th August <br/> Tickets</a>
+      <a href="https://www.eventbrite.com.au/e/nocturne-presents-qzb-melbourne-tickets-984878266407" className="link-button">Noctober Spooky Season Double Pass <br/> (Coming soon)</a>
+      <a href="https://www.eventbrite.com.au/e/nocturne-presents-qzb-melbourne-tickets-984878266407" className="link-button">TBA | 4th October  <br/>  Tickets (Coming soon)</a>
+      <a href="#https://www.eventbrite.com.au/e/nocturne-presents-captain-bass-melbourne-tickets-984934203717" className="link-button">TBA | 25th October  <br/>  Tickets (Coming soon)</a>
+      <a href="#contact" className="link-button">Join The Nocturne Family <br/> Sign Up to Our Mailing List </a>
+
     </div>
     {/* <div id="image-gallery" className="image-gallery">
     </div> */}

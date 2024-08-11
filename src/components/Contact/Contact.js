@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="row">
           <iframe
             title="Contact Form"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSc9VuBSZRmA9ejli-KBqIjD3G7ndwZke0Dq3nnnJ9m7C-_Jsw/viewform?embedded=true" 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSeR19ZjJGROmp3K3YkHC-2xqNyUDc1JLxUvpLAnroOAgNlylg/viewform?usp=sf_link" 
             width="100%" 
             height="800"
             frameBorder="0" 

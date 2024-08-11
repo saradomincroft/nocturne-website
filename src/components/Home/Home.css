@@ -1,5 +1,5 @@
 .header-container {
-  margin-bottom: 10%;
+  margin-bottom: 14%;
 }
 
 .typing-text-container {
@@ -24,11 +24,11 @@
 
 .logo-container {
   position: absolute;
-  width: 70%;
+  width: 60%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.5);
   opacity: 0;
-  animation: zoomIn 1s forwards, spookyGlow 1.5s 1s infinite alternate; 
+  animation: zoomIn 0.5s forwards, spookyGlow 1.5s 0.5s infinite alternate; 
   z-index: 1;
 }
 
@@ -76,22 +76,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 2%;
   margin: 20px 0;
 }
 
 .link-button {
   background-color: #FF2400;
   color: #fff;
-  padding: 10px 20px;
-  margin: 10px 0;
+  padding: 10px 2px;
+  margin: 6px 0;
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   max-width: 300px;
   transition: background-color 0.3s ease;
+  font-family: monospace;
+  font-size: 14px;
 }
 
 .link-button:hover {
   background-color: #ff6347;
 }
+

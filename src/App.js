@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation/Navigation';
-import Home from './components/Home/Home';
-import Music from './components/Music/Music';
-import Contact from './components/Contact/Contact';
 import Socials from './components/Socials/Socials';
+import Home from './components/Home/Home';
+import Events from './components/Events/Events';
+import Contact from './components/Contact/Contact';
+import MailingList from './components/MailingList/MailingList';
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/music" element={<Music />} />
+            {/* <Route path="/about" element={<About />} /> */}
+            <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/mailing-list" element={<MailingList />} />
           </Routes>
         </main>
       </Router>
