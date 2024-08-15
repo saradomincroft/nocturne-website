@@ -1,21 +1,189 @@
-import React from 'react';
-import { Container} from 'react-bootstrap';
+import React, { useRef } from 'react';
+import { Container } from 'react-bootstrap';
 
 export default function MailingList() {
+  const formRef = useRef(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
+    const form = event.target;
+    
+    // Perform subscription (e.g., via AJAX, or just let the form submission happen if needed)
+    // If successful:
+    form.submit(); // Submit the form to Mailchimp
+
+    // Clear the form after submission
+    formRef.current.reset();
+  };
+
   return (
     <div id="Contact" className="tabcontent">
       <Container>
-        <div className="row">
-          <iframe
-            title="Contact Form"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfmimjstNouwZcu3KoVva3vzOjSBb7MwZnhCTUAwSTHG_ChUw/viewform?usp=sf_link" 
-            width="100%" 
-            height="800"
-            frameBorder="0" 
-            marginHeight="0" 
-            marginWidth="0">
-            Loading…
-          </iframe>
+        <div className="row justify-content-center">
+          <div id="mc_embed_signup_shell">
+            <style type="text/css">
+              {`
+              #mc_embed_signup {
+                background: #000;
+                color: #fff;
+                clear: left;
+                font: 14px monospace, Arial, sans-serif;
+                width: 90%;
+                max-width: 70%;
+                padding: 20px;
+                margin: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+              }
+              .mc-field-group {
+                margin-bottom: 20px;
+              }
+              .mc-field-group label {
+                display: block;
+                margin-bottom: 5px;
+                color: #fff;
+              }
+              .mc-field-group input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background-color: #333;
+                color: #fff; 
+              }
+              .button {
+                background-color: #333;
+                border: none;
+                color: #FF2400; 
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100%;
+              }
+              .button:hover {
+                background-color: #A9A9A9;
+              }
+              .status-message {
+                margin-top: 10px;
+                color: #d9534f;
+              }
+              .refferal_badge {
+                filter: invert(1);
+              }
+              `}
+            </style>
+            <div id="mc_embed_signup">
+              <form
+                action="https://nocturneravers.us14.list-manage.com/subscribe/post?u=96589083eb15db8d74ebcb1a4&id=81b9d3afeb&f_id=0077aee5f0"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                className="validate"
+                target="_blank"
+                ref={formRef}
+                onSubmit={handleSubmit}
+              >
+                <div id="mc_embed_signup_scroll">
+                  <h2 style={{ color: '#fff' }}>Subscribe</h2>
+                  <div className="indicates-required">
+                    Signup for early access tickets and discounts!
+                  </div>
+                  <div className="mc-field-group">
+                    <label htmlFor="mce-EMAIL"></label>
+                    <input
+                      type="email"
+                      name="EMAIL"
+                      className="required email"
+                      id="mce-EMAIL"
+                      required
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div hidden="">
+                    <input
+                      type="hidden"
+                      name="tags"
+                      value="7361628,7361624"
+                    />
+                  </div>
+                  <div id="mce-responses" className="clear foot">
+                    <div
+                      className="response"
+                      id="mce-error-response"
+                      style={{ display: 'none' }}
+                    ></div>
+                    <div
+                      className="response"
+                      id="mce-success-response"
+                      style={{ display: 'none' }}
+                    ></div>
+                  </div>
+                  <div
+                    aria-hidden="true"
+                    style={{ position: 'absolute', left: '-5000px' }}
+                  >
+                    <input
+                      type="text"
+                      name="b_96589083eb15db8d74ebcb1a4_81b9d3afeb"
+                      tabIndex="-1"
+                      value=""
+                    />
+                  </div>
+                  <div className="optionalParent">
+                    <div className="clear foot">
+                      <input
+                        type="submit"
+                        name="subscribe"
+                        id="mc-embedded-subscribe"
+                        className="button"
+                        value="Subscribe"
+                      />
+                      <p style={{ margin: '0px auto' }}>
+                        <a
+                          href="http://eepurl.com/iK47Cw"
+                          title="Mailchimp - email marketing made easy and fun"
+                        >
+                          <span
+                            style={{
+                              display: 'inline-block',
+                              backgroundColor: 'transparent',
+                              borderRadius: '4px',
+                            }}
+                          >
+                            {/* <img
+                              className="refferal_badge"
+                              src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                              alt="Intuit Mailchimp"
+                              style={{
+                                width: '220px',
+                                height: '40px',
+                                display: 'flex',
+                                padding: '2px 0px',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                              }}
+                            /> */}
+                          </span>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <script
+              type="text/javascript"
+              src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+            ></script>
+            <script type="text/javascript">
+              {`(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);`}
+            </script>
+          </div>
         </div>
       </Container>
     </div>

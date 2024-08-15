@@ -51,9 +51,9 @@ export default function Home() {
     </div>
     <div className="link-container">
       <a href="https://crucastmlb.eventbrite.com.au/" className="link-button" alt="CruCast Tickets" target="_blank" rel="noopener noreferrer">CruCast Melbourne | 30th August <br/> Tickets</a>
-      <a href="https://noctober-spooky-24.eventbrite.com.au" className="link-button" alt="Noctober Double Pass Tickets" target="_blank" rel="noopener noreferrer">Noctober Spooky Season Double Pass <br/> (Coming soon)</a>
-      <a href="https://qzb-mlb.eventbrite.com.au/" className="link-button" alt="QZB Tickets" target="_blank" rel="noopener noreferrer">TBA | 4th October  <br/>  Tickets (Coming soon)</a>
-      <a href="https://captainbass-mlb.eventbrite.com.au/" className="link-button" alt="Captain Bass Tickets" target="_blank" rel="noopener noreferrer">TBA | 25th October  <br/>  Tickets (Coming soon)</a>
+      <a href="https://noctober-spooky-24.eventbrite.com.au" className="link-button" alt="Noctober Double Pass Tickets" target="_blank" rel="noopener noreferrer">🦇 Noctober Spooky Season 🦇<br/> (QZB & Captain Bass) Double Pass <br/>Tickets</a>
+      <a href="https://qzb-mlb.eventbrite.com.au/" className="link-button" alt="QZB Tickets" target="_blank" rel="noopener noreferrer">QZB | 4th October  <br/>Tickets</a>
+      <a href="https://captainbass-mlb.eventbrite.com.au/" className="link-button" alt="Captain Bass Tickets" target="_blank" rel="noopener noreferrer">Captain Bass | 25th October  <br/>  Tickets</a>
       <a href="/mailing-list" className="link-button" alt="Mailing list">Join The Nocturne Family <br/> Sign Up to Our Mailing List </a>
     </div>
 

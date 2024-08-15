@@ -1,11 +1,11 @@
 .custom-navbar {
-  background-color: #040403;
+  background-image: url('/public/img/bg.jpg');
   height: 50px;
   position: fixed;
   width: 100%;
   z-index: 1000;
-  left: 0; /* Center the navbar horizontally */
-  text-align: center; /* Center the content inside navbar */
+  left: 0;
+  text-align: center;
   
 }
 
@@ -17,6 +17,7 @@
 .custom-navbar .navbar-nav .nav-link {
   padding: 10px 20px;
   font-size: 18px;
+  font-family: monospace;
   color: #f8f8f0;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -49,7 +50,9 @@
   z-index: 1100;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-image: url('/public/img/bg.jpg');
+  background-repeat: repeat;
+  background-size: auto;
   overflow-x: hidden;
   /* overflow-y: hidden; */
   transition: 0.5s;
@@ -61,6 +64,7 @@
   padding: 15px;
   text-align: center;
   font-size: 18px;
+  font-family: monospace;
   transition: 0.3s;
   display: block;
   color: #f8f8f0;
