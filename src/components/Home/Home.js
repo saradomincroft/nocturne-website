@@ -54,7 +54,7 @@ export default function Home() {
       <a href="https://noctober-spooky-24.eventbrite.com.au" className="link-button" alt="Noctober Double Pass Tickets" target="_blank" rel="noopener noreferrer">🦇 Noctober Spooky Season 🦇<br/> (QZB & Captain Bass) Double Pass <br/>Tickets</a>
       <a href="https://qzb-mlb.eventbrite.com.au/" className="link-button" alt="QZB Tickets" target="_blank" rel="noopener noreferrer">QZB | 4th October  <br/>Tickets</a>
       <a href="https://captainbass-mlb.eventbrite.com.au/" className="link-button" alt="Captain Bass Tickets" target="_blank" rel="noopener noreferrer">Captain Bass | 25th October  <br/>  Tickets</a>
-      <a href="/mailing-list" className="link-button" alt="Mailing list">Join The Nocturne Family <br/> Sign Up to Our Mailing List </a>
+      <a href="/mailing-list" className="link-button" alt="Mailing list">Join The Nocturne Family 🦇<br/> Sign Up to Our Mailing List </a>
     </div>
 
     {/* <div id="image-gallery" className="image-gallery">
