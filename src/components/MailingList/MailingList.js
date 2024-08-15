@@ -1,18 +1,35 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Container } from 'react-bootstrap';
 
 export default function MailingList() {
   const formRef = useRef(null);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission
     const form = event.target;
-    
-    // Perform subscription (e.g., via AJAX, or just let the form submission happen if needed)
-    // If successful:
-    form.submit(); // Submit the form to Mailchimp
 
-    // Clear the form after submission
+    // Perform AJAX request to submit the form
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors', // Mailchimp requires no-cors mode
+      });
+
+      // If the request is successful, update the state to show the thank you message
+      if (response) {
+        setSubmitted(true);
+      } else {
+        console.error('Submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+
+    // Optionally reset the form (if you need to reset the form fields)
     formRef.current.reset();
   };
 
@@ -78,103 +95,79 @@ export default function MailingList() {
               `}
             </style>
             <div id="mc_embed_signup">
-              <form
-                action="https://nocturneravers.us14.list-manage.com/subscribe/post?u=96589083eb15db8d74ebcb1a4&id=81b9d3afeb&f_id=0077aee5f0"
-                method="post"
-                id="mc-embedded-subscribe-form"
-                name="mc-embedded-subscribe-form"
-                className="validate"
-                target="_blank"
-                ref={formRef}
-                onSubmit={handleSubmit}
-              >
-                <div id="mc_embed_signup_scroll">
-                  <h2 style={{ color: '#fff' }}>Subscribe</h2>
-                  <div className="indicates-required">
-                    Signup for early access tickets and discounts!
-                  </div>
-                  <div className="mc-field-group">
-                    <label htmlFor="mce-EMAIL"></label>
-                    <input
-                      type="email"
-                      name="EMAIL"
-                      className="required email"
-                      id="mce-EMAIL"
-                      required
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div hidden="">
-                    <input
-                      type="hidden"
-                      name="tags"
-                      value="7361628,7361624"
-                    />
-                  </div>
-                  <div id="mce-responses" className="clear foot">
-                    <div
-                      className="response"
-                      id="mce-error-response"
-                      style={{ display: 'none' }}
-                    ></div>
-                    <div
-                      className="response"
-                      id="mce-success-response"
-                      style={{ display: 'none' }}
-                    ></div>
-                  </div>
-                  <div
-                    aria-hidden="true"
-                    style={{ position: 'absolute', left: '-5000px' }}
-                  >
-                    <input
-                      type="text"
-                      name="b_96589083eb15db8d74ebcb1a4_81b9d3afeb"
-                      tabIndex="-1"
-                      value=""
-                    />
-                  </div>
-                  <div className="optionalParent">
-                    <div className="clear foot">
+              {!submitted ? (
+                <form
+                  action="https://nocturneravers.us14.list-manage.com/subscribe/post?u=96589083eb15db8d74ebcb1a4&id=81b9d3afeb&f_id=0077aee5f0"
+                  method="post"
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  className="validate"
+                  target="_blank"
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                >
+                  <div id="mc_embed_signup_scroll">
+                    <h2 style={{ color: '#fff' }}>Subscribe</h2>
+                    <div className="indicates-required">
+                      Signup for early access tickets and discounts!
+                    </div>
+                    <div className="mc-field-group">
+                      <label htmlFor="mce-EMAIL"></label>
                       <input
-                        type="submit"
-                        name="subscribe"
-                        id="mc-embedded-subscribe"
-                        className="button"
-                        value="Subscribe"
+                        type="email"
+                        name="EMAIL"
+                        className="required email"
+                        id="mce-EMAIL"
+                        required
+                        placeholder="Enter your email"
                       />
-                      <p style={{ margin: '0px auto' }}>
-                        <a
-                          href="http://eepurl.com/iK47Cw"
-                          title="Mailchimp - email marketing made easy and fun"
-                        >
-                          <span
-                            style={{
-                              display: 'inline-block',
-                              backgroundColor: 'transparent',
-                              borderRadius: '4px',
-                            }}
-                          >
-                            {/* <img
-                              className="refferal_badge"
-                              src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                              alt="Intuit Mailchimp"
-                              style={{
-                                width: '220px',
-                                height: '40px',
-                                display: 'flex',
-                                padding: '2px 0px',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                              }}
-                            /> */}
-                          </span>
-                        </a>
-                      </p>
+                    </div>
+                    <div hidden="">
+                      <input
+                        type="hidden"
+                        name="tags"
+                        value="7361628,7361624"
+                      />
+                    </div>
+                    <div id="mce-responses" className="clear foot">
+                      <div
+                        className="response"
+                        id="mce-error-response"
+                        style={{ display: 'none' }}
+                      ></div>
+                      <div
+                        className="response"
+                        id="mce-success-response"
+                        style={{ display: 'none' }}
+                      ></div>
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      style={{ position: 'absolute', left: '-5000px' }}
+                    >
+                      <input
+                        type="text"
+                        name="b_96589083eb15db8d74ebcb1a4_81b9d3afeb"
+                        tabIndex="-1"
+                        value=""
+                      />
+                    </div>
+                    <div className="optionalParent">
+                      <div className="clear foot">
+                        <input
+                          type="submit"
+                          name="subscribe"
+                          id="mc-embedded-subscribe"
+                          className="button"
+                          value="Subscribe"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              ) : (
+                <p>Thank you for subscribing!</p>
+              )}
             </div>
             <script
               type="text/javascript"
