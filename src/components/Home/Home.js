@@ -28,7 +28,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const typingAnimationDuration = 1200;
+    const typingAnimationDuration = 1350;
 
     const timer = setTimeout(() => {
       setLogoVisible(true);
