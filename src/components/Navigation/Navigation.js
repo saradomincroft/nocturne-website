@@ -51,9 +51,9 @@ export default function Navigation() {
             <Nav className="align-items-center custom-nav">
               <Nav.Link as={NavLink} to="/" exact onClick={() => openTab('home', '/')}>Home</Nav.Link>
               <Nav.Link as={NavLink} to="/about" onClick={() => openTab('about', '/about')}>About</Nav.Link>
-              <Nav.Link as={NavLink} to="/events" onClick={() => openTab('events', '/events')}>Events</Nav.Link>
-              <Nav.Link as={NavLink} to="/contact" onClick={() => openTab('contact', '/contact')}>Contact</Nav.Link>
-              <Nav.Link as={NavLink} to="/mailing-list" onClick={() => openTab('mailing-list', '/mailing-list')}>Mailing List</Nav.Link>
+              {/* <Nav.Link as={NavLink} to="/events" onClick={() => openTab('events', '/events')}>Events</Nav.Link> */}
+              {/* <Nav.Link as={NavLink} to="/contact" onClick={() => openTab('contact', '/contact')}>Contact</Nav.Link> */}
+              <Nav.Link as={NavLink} to="/mailing-list" onClick={() => openTab('mailing-list', '/mailing-list')}>Subscribe</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -65,9 +65,9 @@ export default function Navigation() {
         <Nav className="flex-column align-items-center custom-nav">
           <Nav.Link as={NavLink} to="/" exact className="nav-link" onClick={() => openTab('home', '/')}>Home</Nav.Link>
           <Nav.Link as={NavLink} to="/about" className="nav-link" onClick={() => openTab('about', '/about')}>About</Nav.Link>
-          <Nav.Link as={NavLink} to="/events" className="nav-link" onClick={() => openTab('events', '/events')}>Events</Nav.Link>
-          <Nav.Link as={NavLink} to="/contact" className="nav-link" onClick={() => openTab('contact', '/contact')}>Contact</Nav.Link>
-          <Nav.Link as={NavLink} to="/mailing-list" className="nav-link" onClick={() => openTab('mailing-list', '/mailing-list')}>Mailing List</Nav.Link>
+          {/* <Nav.Link as={NavLink} to="/events" className="nav-link" onClick={() => openTab('events', '/events')}>Events</Nav.Link> */}
+          {/* <Nav.Link as={NavLink} to="/contact" className="nav-link" onClick={() => openTab('contact', '/contact')}>Contact</Nav.Link> */}
+          <Nav.Link as={NavLink} to="/mailing-list" className="nav-link" onClick={() => openTab('mailing-list', '/mailing-list')}>Subscribe</Nav.Link>
         </Nav>
         {/* <div className="profile-image-container">
           <img src="/img/profile-image.jpg" alt="Profile" className="profile-image" />

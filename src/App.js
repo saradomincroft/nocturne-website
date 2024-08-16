@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
 import Socials from './components/Socials/Socials';
+import About from './components/About/About';
 import Events from './components/Events/Events';
 import Contact from './components/Contact/Contact';
 import MailingList from './components/MailingList/MailingList';
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mailing-list" element={<MailingList />} />
           </Routes>

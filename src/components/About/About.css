@@ -1,0 +1,75 @@
+.about-container {
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.9); 
+    color: #f4f4f4; 
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 8px; 
+    max-width: 80%;
+    margin: 0 auto; 
+    text-align: center; 
+    box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.1);
+  }
+  
+  .about-logo-box {
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-logo {
+    max-width: 50%; 
+    padding-top: 5%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1));
+  }
+
+@media (min-width: 768px) {
+    .about-logo {
+      max-width: 200px;
+      filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1)); 
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .about-logo {
+      max-width: 250px;
+      filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-logo {
+      max-width: 120px;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)); 
+    }
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #f4f4f4;
+  }
+  
+  .about-vision,
+  .about-description,
+  .about-highlights,
+  .about-future {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+  
+  .stackpackers-link {
+    color: #f4f4f4; 
+    text-decoration: underline;
+  }
+  
+  .stackpackers-link:visited {
+    color: #f4f4f4;
+  }
+  
+  .stackpackers-link:active {
+    color: #f4f4f4; 
+  }
+  

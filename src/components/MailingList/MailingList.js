@@ -50,7 +50,7 @@ export default function MailingList() {
                 padding: 20px;
                 margin: auto;
                 border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+                  box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.1);
               }
               .mc-field-group {
                 margin-bottom: 20px;
