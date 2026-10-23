@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/Gallery/Gallery.css"],"sourcesContent":["\n.nocturne-gallery-screen {\n  overflow: hidden;\n}\n\n.nocturne-gallery-track {\n  display: flex;\n  flex: 0 1 auto;\n  align-items: center;\n  gap: 16px;\n  width: 100%;\n  min-width: 0;\n  min-height: 0;\n  overflow-x: auto;\n  overflow-y: hidden;\n  padding: 0 0 12px;\n  scroll-snap-type: x mandatory;\n  scrollbar-width: thin;\n  scrollbar-color: var(--lime) rgb(240 240 232 / 12%);\n}\n\n.nocturne-gallery-image {\n  flex: 0 0 auto;\n  height: min(48vh, 430px);\n  max-width: 75vw;\n  margin: 0;\n  overflow: hidden;\n  background: var(--charcoal);\n  scroll-snap-align: start;\n}\n\n.nocturne-gallery-image img {\n  display: block;\n  width: auto;\n  height: 100%;\n  max-width: 75vw;\n  object-fit: cover;\n}\n\n.nocturne-gallery-screen .nocturne-list-heading {\n  margin-bottom: 16px;\n}\n\n@media (max-width: 760px) {\n  .nocturne-gallery-image {\n    height: min(43svh, 340px);\n    max-width: 80vw;\n  }\n\n  .nocturne-gallery-image img {\n    max-width: 80vw;\n  }\n}\n"],"names":[],"mappings":"AACA;;;;AAIA;;;;;;;;;;;;;;;AAgBA;;;;;;;;;;AAUA;;;;;;;;AAQA;;;;AAIA;EACE;;;;;EAKA"}}]
+}

@@ -6,7 +6,7 @@ width: 100vw;
 } */
 
 body {
-  background-image: url('/public/img/bg.jpg');
+  background-image: url('/img/bg.jpg');
   background-repeat: repeat;
   background-size: auto;
   margin: 0;
@@ -20,5 +20,5 @@ body {
 .tabcontent {
   margin: 0;
   padding: 0;
-  background-image: url('/public/img/bg.jpg');
+  background-image: url('/img/bg.jpg');
 }

@@ -1,0 +1,12 @@
+/* [project]/src/components/PastRaves/PastRaves.css [app-client] (css) */
+.nocturne-past-screen .nocturne-swipe-hint {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .nocturne-past-screen .nocturne-carousel-controls {
+    margin-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=src_components_PastRaves_PastRaves_css_1igg3k2-ikub5._.single.css.map*/

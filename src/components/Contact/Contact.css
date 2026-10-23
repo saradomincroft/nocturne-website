@@ -1,0 +1,83 @@
+
+.nocturne-contact-screen {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.nocturne-contact-screen > .nocturne-kicker {
+  margin-bottom: 22px;
+  color: var(--lime);
+}
+
+.nocturne-contact-screen h1 {
+  margin: 0 0 34px;
+  color: var(--white);
+  font-size: clamp(68px, 12vw, 160px);
+  font-weight: 900;
+  letter-spacing: -0.09em;
+  line-height: 0.82;
+  text-transform: uppercase;
+}
+
+.nocturne-contact-screen h1 span {
+  color: var(--lime);
+}
+
+.nocturne-contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  width: min(100%, 560px);
+}
+
+.nocturne-contact-links a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 17px 0;
+  border-bottom: 1px solid rgb(240 240 232 / 25%);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  transition: color 180ms ease;
+}
+
+.nocturne-contact-links a span {
+  color: rgb(240 240 232 / 65%);
+  font-weight: 400;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.nocturne-contact-links a:hover,
+.nocturne-contact-links a:hover span {
+  color: var(--lime);
+}
+
+@media (max-width: 760px) {
+  .nocturne-contact-screen > .nocturne-kicker {
+    margin-bottom: 20px;
+    font-size: 9px;
+  }
+
+  .nocturne-contact-screen h1 {
+    margin-bottom: 28px;
+    font-size: clamp(66px, 16vw, 110px);
+  }
+
+  .nocturne-contact-links a {
+    gap: 8px;
+    padding: 15px 0;
+    font-size: 10px;
+  }
+}

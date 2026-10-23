@@ -1,100 +1,409 @@
-.header-container {
-  margin-bottom: 14%;
-}
 
-.typing-text-container {
+.nocturne-home-screen {
+  position: relative;
   display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* DESKTOP: details left, artwork right */
+
+.nocturne-featured-event {
+  position: relative;
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  grid-template-areas: "content artwork";
+  align-items: stretch;
+  gap: clamp(28px, 5vw, 84px);
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+}
+
+/* Artwork */
+
+.nocturne-hero-artwork {
+  grid-area: artwork;
+  display: flex;
   align-items: center;
-  height: 10vh;
-  margin-bottom: 5%;
-  padding: 0 10px;
-}
-
-.typing-text {
-  font-family: monospace;
-  white-space: nowrap;
+  justify-content: center;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
   overflow: hidden;
-  border-right: 2px solid #fff;
-  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
-  font-size: 24px;
-  color: #fff;
-  text-align: center;
+  background: transparent;
 }
 
-.logo-container {
-  position: absolute;
-  width: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  opacity: 0;
-  animation: zoomIn 0.5s forwards, spookyGlow 2s infinite alternate ease-in-out; 
-  z-index: 1;
+.nocturne-hero-artwork .nocturne-artwork-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
-/* Zoom in animation */
-@keyframes zoomIn {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-}
+/* Event information */
 
-/* Faster Spooky glow animation */
-@keyframes spookyGlow {
-  0% {
-    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.4));
-    opacity: 0.9;
-  }
-  50% {
-    filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.8));
-    opacity: 1;
-  }
-  100% {
-    filter: drop-shadow(0 0 30px rgba(255, 0, 0, 1));
-    opacity: 0.9;
-  }
-}
-
-/* Typing animation */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* Cursor blink animation */
-@keyframes blink {
-  0% { border-right: 2px solid transparent; }
-  100% { border-right: 2px solid #fff; }
-}
-
-.link-container {
+.nocturne-home-content {
+  grid-area: content;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 2%;
-  margin: 20px 0;
-}
-
-.link-button {
-  background-color: #FF2400;
-  color: #fff;
-  padding: 10px 2px;
-  margin: 6px 0;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
   width: 100%;
-  max-width: 300px;
-  transition: background-color 0.3s ease;
-  font-family: monospace;
-  font-size: 14px;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
 }
 
-.link-button:hover {
-  background-color: #ff6347;
+.nocturne-event-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.nocturne-event-counter {
+  color: var(--white);
+  letter-spacing: 0.16em;
+}
+
+.nocturne-event-top .nocturne-event-date {
+  margin: 0;
+  color: var(--lime);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.nocturne-feature-details {
+  width: 100%;
+  min-width: 0;
+  margin: 32px 0 0;
+  padding: 0;
+}
+
+.nocturne-feature-details h1 {
+  margin: 0 0 18px;
+  color: var(--white);
+  font-size: clamp(42px, 6vw, 100px);
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  line-height: 0.88;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.nocturne-feature-details .nocturne-venue {
+  margin-bottom: 8px;
+}
+
+.nocturne-feature-details .nocturne-lineup {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Ticket link directly below the event details */
+
+.nocturne-event-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  margin-top: 26px;
+}
+
+.nocturne-event-bottom .nocturne-ticket {
+  align-self: flex-start;
+}
+
+/* Lime navigation arrows */
+
+.nocturne-feature-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.nocturne-feature-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--lime);
+  border-radius: 0;
+  background: transparent;
+  color: var(--lime);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.nocturne-feature-controls button:hover {
+  border-color: var(--lime);
+  background: var(--lime);
+  color: var(--black);
+}
+
+.nocturne-feature-controls button:active {
+  transform: translateY(1px);
+}
+
+.nocturne-feature-controls button:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+/* No upcoming events */
+
+.nocturne-no-event {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+}
+
+.nocturne-no-event .nocturne-kicker {
+  margin-bottom: 22px;
+  color: var(--white);
+}
+
+.nocturne-no-event h1 {
+  margin: 0;
+  color: var(--lime);
+  font-size: clamp(58px, 10vw, 150px);
+  font-weight: 900;
+  letter-spacing: -0.085em;
+  line-height: 0.83;
+  text-transform: uppercase;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) and (min-width: 761px) {
+  .nocturne-featured-event {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 28px;
+  }
+
+  .nocturne-feature-details {
+    margin-top: 26px;
+  }
+
+  .nocturne-feature-details h1 {
+    font-size: clamp(38px, 5.5vw, 65px);
+  }
+
+  .nocturne-event-bottom {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .nocturne-event-bottom .nocturne-ticket {
+    min-height: 48px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .nocturne-feature-controls {
+    gap: 6px;
+  }
+
+  .nocturne-feature-controls button {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+}
+
+/* MOBILE: artwork first, details underneath */
+
+@media (max-width: 760px) {
+  .nocturne-home-screen {
+    justify-content: flex-start;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .nocturne-home-screen::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nocturne-featured-event {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 14px;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    max-height: none;
+    overflow: visible;
+    padding: 0 0 6px;
+  }
+
+  .nocturne-featured-event .nocturne-hero-artwork {
+    order: 1;
+    flex: 0 0 auto;
+    align-self: center;
+    width: 100%;
+    height: min(36svh, 330px);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .nocturne-featured-event .nocturne-home-content {
+    order: 2;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .nocturne-event-top {
+    gap: 5px;
+  }
+
+  .nocturne-event-counter {
+    font-size: 10px;
+  }
+
+  .nocturne-event-top .nocturne-event-date {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .nocturne-feature-details {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nocturne-feature-details h1 {
+    margin: 0 0 10px;
+    font-size: clamp(34px, 9vw, 52px);
+    letter-spacing: -0.07em;
+    line-height: 0.95;
+  }
+
+  .nocturne-feature-details .nocturne-venue {
+    margin-bottom: 5px;
+    font-size: 13px;
+  }
+
+  .nocturne-feature-details .nocturne-lineup {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .nocturne-event-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .nocturne-event-bottom .nocturne-ticket {
+    min-height: 46px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+
+  .nocturne-feature-controls {
+    gap: 8px;
+  }
+
+  .nocturne-feature-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .nocturne-no-event {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 10px 0 28px;
+  }
+
+  .nocturne-no-event .nocturne-kicker {
+    margin-bottom: 18px;
+    font-size: 9px;
+  }
+
+  .nocturne-no-event h1 {
+    font-size: clamp(52px, 13vw, 88px);
+    line-height: 0.9;
+  }
+}
+
+/* Short mobile screens */
+
+@media (max-width: 760px) and (max-height: 700px) {
+  .nocturne-featured-event {
+    gap: 10px;
+  }
+
+  .nocturne-featured-event .nocturne-hero-artwork {
+    height: min(30svh, 220px);
+  }
+
+  .nocturne-featured-event .nocturne-home-content {
+    gap: 10px;
+  }
+
+  .nocturne-feature-details h1 {
+    font-size: clamp(29px, 8vw, 40px);
+  }
+
+  .nocturne-event-bottom {
+    gap: 10px;
+  }
+
+  .nocturne-event-bottom .nocturne-ticket {
+    padding: 0 12px;
+  }
+
+  .nocturne-feature-controls button {
+    width: 38px;
+    height: 38px;
+    font-size: 19px;
+  }
 }

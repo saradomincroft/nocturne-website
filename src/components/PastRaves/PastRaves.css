@@ -1,0 +1,10 @@
+
+.nocturne-past-screen .nocturne-swipe-hint {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .nocturne-past-screen .nocturne-carousel-controls {
+    margin-bottom: 10px;
+  }
+}
