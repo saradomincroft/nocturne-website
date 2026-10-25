@@ -14,14 +14,14 @@ export type NocturneEvent = {
 
 export const events: NocturneEvent[] = [
   {
-    id: 'halloween-2026',
-    title: 'HALLOWEEN',
-    date: '2026-10-31',
-    venue: 'Venue TBA',
-    lineup: ['Artist TBA', 'Artist TBA'],
+    id: 'hard-dnb-2026',
+    title: 'HARD DNB',
+    date: '2026-11-13',
+    venue: 'Bad Decisions, Fitzroy',
+    lineup: ['Asteria', 'HLDUBZ', 'Phoenix', 'Stackpackers', 'Strafe'],
     desktopImage: '/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg',
     mobileImage: '/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg',
-    ticketUrl: 'https://ra.co/events/2243135',
+    ticketUrl: 'https://nocturne-hard-dnb-13-nov-26.eventbrite.com.au/',
   },
   {
     id: 'night-shift',

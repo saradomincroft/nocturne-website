@@ -1,5 +1,6 @@
+ 'use client';
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { NocturneEvent } from '@/data/events';
 import './EventUI.css';
 
@@ -22,14 +23,22 @@ export function EventArtwork({
 }) {
   return (
     <div className={`nocturne-artwork ${className}`}>
-      <img
-        className="nocturne-artwork-image"
-        src={event.desktopImage}
-        alt={`${event.title} event artwork`}
-        style={{
-          objectPosition: event.imagePosition ?? 'center',
-        }}
-      />
+      <picture>
+        {event.mobileImage && (
+          <source
+            media="(max-width: 760px)"
+            srcSet={event.mobileImage}
+          />
+        )}
+        <img
+          className="nocturne-artwork-image"
+          src={event.desktopImage}
+          alt={`${event.title} event artwork`}
+          style={{
+            objectPosition: event.imagePosition ?? 'center',
+          }}
+        />
+      </picture>
     </div>
   );
 }
@@ -44,7 +53,7 @@ export function TicketLink({ event }: { event: NocturneEvent }) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      TICKETS <span aria-hidden="true">↗</span>
+      TICKETS
     </a>
   );
 }
@@ -76,14 +85,46 @@ export function EventCarousel({
   emptyMessage: string;
 }) {
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    const updateControls = () => {
+      const maxScroll =
+        carousel.scrollWidth - carousel.clientWidth;
+
+      setCanScrollLeft(carousel.scrollLeft > 1);
+      setCanScrollRight(maxScroll - carousel.scrollLeft > 1);
+    };
+
+    updateControls();
+
+    carousel.addEventListener('scroll', updateControls, {
+      passive: true,
+    });
+
+    const observer = new ResizeObserver(updateControls);
+    observer.observe(carousel);
+
+    Array.from(carousel.children).forEach((child) =>
+      observer.observe(child),
+    );
+
+    return () => {
+      carousel.removeEventListener('scroll', updateControls);
+      observer.disconnect();
+    };
+  }, [items]);
 
   const moveCarousel = (direction: -1 | 1) => {
     const carousel = carouselRef.current;
     if (!carousel) return;
 
-    const firstCard = carousel.querySelector<HTMLElement>(
-      '.nocturne-event-card',
-    );
+    const firstCard =
+      carousel.querySelector<HTMLElement>('.nocturne-event-card');
 
     const distance = firstCard
       ? firstCard.offsetWidth + 16
@@ -101,23 +142,29 @@ export function EventCarousel({
 
   return (
     <div className="nocturne-carousel-wrap">
-      <div className="nocturne-carousel-controls">
-        <button
-          type="button"
-          onClick={() => moveCarousel(-1)}
-          aria-label="Previous event"
-        >
-          ←
-        </button>
+      {(canScrollLeft || canScrollRight) && (
+        <div className="nocturne-carousel-controls">
+          {canScrollLeft && (
+            <button
+              type="button"
+              onClick={() => moveCarousel(-1)}
+              aria-label="Previous event"
+            >
+              ←
+            </button>
+          )}
 
-        <button
-          type="button"
-          onClick={() => moveCarousel(1)}
-          aria-label="Next event"
-        >
-          →
-        </button>
-      </div>
+          {canScrollRight && (
+            <button
+              type="button"
+              onClick={() => moveCarousel(1)}
+              aria-label="Next event"
+            >
+              →
+            </button>
+          )}
+        </div>
+      )}
 
       <div className="nocturne-event-carousel" ref={carouselRef}>
         {items.map((event) => (

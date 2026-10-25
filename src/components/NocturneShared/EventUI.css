@@ -1,9 +1,11 @@
 
-.nocturne-artwork {
+/* Correct responsive event artwork */
+
+.nocturne-artwork picture {
   display: block;
+  width: 100%;
+  height: 100%;
   min-width: 0;
-  overflow: hidden;
-  background: var(--charcoal);
 }
 
 .nocturne-artwork-image {
@@ -14,218 +16,87 @@
   object-position: center;
 }
 
-.nocturne-event-date {
-  margin: 0 0 10px;
-  color: var(--lime);
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 1.5;
+/* Past-event cards keep their existing cropped poster style */
+.nocturne-event-card > .nocturne-artwork {
+  overflow: hidden;
 }
 
-.nocturne-venue {
-  margin: 0 0 8px;
-  color: var(--white);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.5;
+.nocturne-event-card > .nocturne-artwork .nocturne-artwork-image {
+  object-fit: cover;
 }
 
-.nocturne-lineup {
-  margin: 0;
-  color: rgb(240 240 232 / 70%);
-  font-size: 13px;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
+/* Homepage artwork: show the entire poster, never crop it */
+.nocturne-hero-artwork {
+  overflow: hidden;
 }
 
-.nocturne-ticket {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  width: fit-content;
-  max-width: 100%;
-  padding: 13px 17px;
-  border: 1px solid var(--lime);
-  color: var(--lime);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.13em;
-  transition: background 180ms ease, color 180ms ease;
-}
-
-.nocturne-ticket:hover {
-  background: var(--lime);
-  color: var(--black);
-}
-
-.nocturne-carousel-wrap {
-  width: 100%;
-  min-width: 0;
-}
-
-.nocturne-carousel-controls {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-
-.nocturne-carousel-controls button {
+.nocturne-hero-artwork picture {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 38px;
-  padding: 0;
-  border: 1px solid rgb(223 255 0 / 60%);
-  background: transparent;
-  color: var(--lime);
-  font-size: 22px;
-  cursor: pointer;
-  transition: background 180ms ease, color 180ms ease;
+  overflow: hidden;
 }
 
-.nocturne-carousel-controls button:hover {
+.nocturne-hero-artwork .nocturne-artwork-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Bigger, solid yellow ticket button without an icon */
+.nocturne-ticket {
+  min-height: 58px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  border: 2px solid var(--lime);
   background: var(--lime);
   color: var(--black);
-}
-
-.nocturne-event-carousel {
-  display: flex;
-  align-items: stretch;
-  gap: 16px;
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0 0 12px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: var(--lime) rgb(240 240 232 / 12%);
-}
-
-.nocturne-event-carousel::-webkit-scrollbar,
-.nocturne-gallery-track::-webkit-scrollbar {
-  height: 4px;
-}
-
-.nocturne-event-carousel::-webkit-scrollbar-track,
-.nocturne-gallery-track::-webkit-scrollbar-track {
-  background: rgb(240 240 232 / 12%);
-}
-
-.nocturne-event-carousel::-webkit-scrollbar-thumb,
-.nocturne-gallery-track::-webkit-scrollbar-thumb {
-  background: var(--lime);
-}
-
-.nocturne-event-card {
-  display: flex;
-  flex: 0 0 clamp(230px, 25vw, 320px);
-  flex-direction: column;
-  min-width: 0;
-  border: 1px solid rgb(240 240 232 / 16%);
-  background: rgb(8 9 8 / 65%);
-  scroll-snap-align: start;
-}
-
-.nocturne-event-card > .nocturne-artwork {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-}
-
-.nocturne-card-content {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
-  padding: 18px;
-}
-
-.nocturne-card-details {
-  width: 100%;
-}
-
-.nocturne-card-details .nocturne-event-date {
-  margin-bottom: 10px;
-}
-
-.nocturne-card-details h2 {
-  margin: 0 0 10px;
-  color: var(--white);
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  line-height: 1;
-  overflow-wrap: anywhere;
-}
-
-.nocturne-card-details .nocturne-venue {
-  font-size: 12px;
-}
-
-.nocturne-card-details .nocturne-lineup {
-  font-size: 11px;
-}
-
-.nocturne-card-content .nocturne-ticket {
-  margin-top: auto;
-}
-
-.nocturne-empty {
-  margin: 0;
-  color: rgb(240 240 232 / 65%);
   font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-decoration: none;
 }
 
-.nocturne-loading-dots {
-  display: inline-flex;
-  gap: 0.06em;
-  margin-left: 0.08em;
+.nocturne-ticket:hover {
+  background: transparent;
   color: var(--lime);
 }
 
-.nocturne-loading-dots span {
-  display: inline-block;
-  animation: nocturne-dot-pulse 1.2s infinite ease-in-out;
+/* Bold lineup text */
+.nocturne-lineup {
+  font-weight: 800;
 }
 
-.nocturne-loading-dots span:nth-child(2) {
-  animation-delay: 0.18s;
-}
-
-.nocturne-loading-dots span:nth-child(3) {
-  animation-delay: 0.36s;
-}
-
-@keyframes nocturne-dot-pulse {
-  0%,
-  60%,
-  100% {
-    opacity: 0.25;
-    transform: translateY(0);
-  }
-
-  30% {
-    opacity: 1;
-    transform: translateY(-0.12em);
-  }
-}
-
+/* Mobile artwork uses its natural poster proportions */
 @media (max-width: 760px) {
-  .nocturne-card-content {
-    padding: 14px;
+  .nocturne-featured-event .nocturne-hero-artwork {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    overflow: visible;
   }
 
-  .nocturne-card-details h2 {
-    font-size: 22px;
+  .nocturne-featured-event .nocturne-hero-artwork picture {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
   }
 
-  .nocturne-event-card {
-    flex-basis: min(72vw, 270px);
+  .nocturne-featured-event .nocturne-hero-artwork .nocturne-artwork-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 36svh;
+    object-fit: contain;
   }
 
-  .nocturne-card-details .nocturne-lineup {
-    font-size: 11px;
+  .nocturne-ticket {
+    min-height: 54px;
+    padding: 0 26px;
+    font-size: 13px;
   }
 }

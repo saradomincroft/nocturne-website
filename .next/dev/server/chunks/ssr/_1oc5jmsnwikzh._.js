@@ -222,144 +222,154 @@ function HomeContent({ upcomingEvents }) {
     ]);
     const safeFeaturedIndex = Math.min(featuredIndex, Math.max(0, upcomingEvents.length - 1));
     const featuredEvent = upcomingEvents[safeFeaturedIndex];
+    const hasMultipleEvents = upcomingEvents.length > 1;
     const showPreviousEvent = ()=>{
-        setFeaturedIndex((index)=>upcomingEvents.length > 0 ? (index - 1 + upcomingEvents.length) % upcomingEvents.length : 0);
+        setFeaturedIndex((index)=>Math.max(0, index - 1));
     };
     const showNextEvent = ()=>{
-        setFeaturedIndex((index)=>upcomingEvents.length > 0 ? (index + 1) % upcomingEvents.length : 0);
+        setFeaturedIndex((index)=>Math.min(upcomingEvents.length - 1, index + 1));
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "nocturne-home-screen",
-        children: featuredEvent ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "nocturne-featured-event",
+        children: featuredEvent ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
             children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["EventArtwork"], {
-                    event: featuredEvent,
-                    className: "nocturne-hero-artwork"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Home/HomeContent.tsx",
-                    lineNumber: 55,
-                    columnNumber: 11
-                }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "nocturne-home-content",
+                    className: "nocturne-featured-event",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "nocturne-event-top",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "nocturne-kicker nocturne-event-counter",
-                                    children: [
-                                        String(safeFeaturedIndex + 1).padStart(2, '0'),
-                                        ' / ',
-                                        String(upcomingEvents.length).padStart(2, '0')
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                    lineNumber: 62,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "nocturne-event-date",
-                                    children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatNocturneDate"])(featuredEvent.date)
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                    lineNumber: 68,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["EventArtwork"], {
+                            event: featuredEvent,
+                            className: "nocturne-hero-artwork"
+                        }, void 0, false, {
                             fileName: "[project]/src/components/Home/HomeContent.tsx",
-                            lineNumber: 61,
+                            lineNumber: 53,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "nocturne-feature-details",
+                            className: "nocturne-home-content",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                    children: featuredEvent.title
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "nocturne-event-top",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "nocturne-event-date",
+                                        children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatNocturneDate"])(featuredEvent.date)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Home/HomeContent.tsx",
+                                        lineNumber: 60,
+                                        columnNumber: 17
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                    lineNumber: 74,
+                                    lineNumber: 59,
                                     columnNumber: 15
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "nocturne-venue",
-                                    children: featuredEvent.venue
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                    lineNumber: 76,
-                                    columnNumber: 15
-                                }, this),
-                                featuredEvent.lineup.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "nocturne-lineup",
-                                    children: featuredEvent.lineup.join(' / ')
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                    lineNumber: 81,
-                                    columnNumber: 17
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/Home/HomeContent.tsx",
-                            lineNumber: 73,
-                            columnNumber: 13
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "nocturne-event-bottom",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TicketLink"], {
-                                    event: featuredEvent
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                    lineNumber: 88,
-                                    columnNumber: 15
-                                }, this),
-                                upcomingEvents.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "nocturne-feature-controls",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "nocturne-feature-details",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            type: "button",
-                                            "aria-label": "Previous upcoming event",
-                                            onClick: showPreviousEvent,
-                                            children: "←"
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                            children: featuredEvent.title
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                            lineNumber: 92,
-                                            columnNumber: 19
+                                            lineNumber: 66,
+                                            columnNumber: 17
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            type: "button",
-                                            "aria-label": "Next upcoming event",
-                                            onClick: showNextEvent,
-                                            children: "→"
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "nocturne-venue",
+                                            children: featuredEvent.venue
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                            lineNumber: 100,
+                                            lineNumber: 68,
+                                            columnNumber: 17
+                                        }, this),
+                                        featuredEvent.lineup.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "nocturne-lineup",
+                                            children: featuredEvent.lineup.join(' / ')
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/Home/HomeContent.tsx",
+                                            lineNumber: 73,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Home/HomeContent.tsx",
-                                    lineNumber: 91,
-                                    columnNumber: 17
+                                    lineNumber: 65,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "nocturne-event-bottom",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["TicketLink"], {
+                                        event: featuredEvent
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/Home/HomeContent.tsx",
+                                        lineNumber: 80,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Home/HomeContent.tsx",
+                                    lineNumber: 79,
+                                    columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Home/HomeContent.tsx",
-                            lineNumber: 87,
+                            lineNumber: 58,
                             columnNumber: 13
+                        }, this)
+                    ]
+                }, featuredEvent.id, true, {
+                    fileName: "[project]/src/components/Home/HomeContent.tsx",
+                    lineNumber: 49,
+                    columnNumber: 11
+                }, this),
+                hasMultipleEvents && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "nocturne-feature-controls",
+                    "aria-label": "Browse upcoming events",
+                    children: [
+                        safeFeaturedIndex > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: "nocturne-previous-event",
+                            type: "button",
+                            "aria-label": "Previous upcoming event",
+                            onClick: showPreviousEvent,
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                "aria-hidden": "true",
+                                children: "←"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Home/HomeContent.tsx",
+                                lineNumber: 97,
+                                columnNumber: 9
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/Home/HomeContent.tsx",
+                            lineNumber: 91,
+                            columnNumber: 7
+                        }, this),
+                        safeFeaturedIndex < upcomingEvents.length - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                            className: "nocturne-next-event",
+                            type: "button",
+                            "aria-label": "Next upcoming event",
+                            onClick: showNextEvent,
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                "aria-hidden": "true",
+                                children: "→"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/Home/HomeContent.tsx",
+                                lineNumber: 108,
+                                columnNumber: 9
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/Home/HomeContent.tsx",
+                            lineNumber: 102,
+                            columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Home/HomeContent.tsx",
-                    lineNumber: 60,
-                    columnNumber: 11
+                    lineNumber: 86,
+                    columnNumber: 3
                 }, this)
             ]
-        }, featuredEvent.id, true, {
+        }, void 0, true, {
             fileName: "[project]/src/components/Home/HomeContent.tsx",
-            lineNumber: 54,
+            lineNumber: 48,
             columnNumber: 9
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "nocturne-no-event",
@@ -369,7 +379,7 @@ function HomeContent({ upcomingEvents }) {
                     children: "THE NEXT ONE IS IN THE WORKS"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Home/HomeContent.tsx",
-                    lineNumber: 114,
+                    lineNumber: 116,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -377,30 +387,30 @@ function HomeContent({ upcomingEvents }) {
                         "NEXT RAVE",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/components/Home/HomeContent.tsx",
-                            lineNumber: 120,
+                            lineNumber: 122,
                             columnNumber: 13
                         }, this),
                         "LOADING",
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LoadingDots"], {}, void 0, false, {
                             fileName: "[project]/src/components/Home/HomeContent.tsx",
-                            lineNumber: 122,
+                            lineNumber: 124,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Home/HomeContent.tsx",
-                    lineNumber: 118,
+                    lineNumber: 120,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Home/HomeContent.tsx",
-            lineNumber: 113,
+            lineNumber: 115,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/Home/HomeContent.tsx",
-        lineNumber: 52,
+        lineNumber: 46,
         columnNumber: 5
     }, this);
 }
@@ -772,6 +782,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+'use client';
 ;
 ;
 ;
@@ -787,21 +798,37 @@ function formatNocturneDate(date) {
 function EventArtwork({ event, className = '' }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: `nocturne-artwork ${className}`,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-            className: "nocturne-artwork-image",
-            src: event.desktopImage,
-            alt: `${event.title} event artwork`,
-            style: {
-                objectPosition: event.imagePosition ?? 'center'
-            }
-        }, void 0, false, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("picture", {
+            children: [
+                event.mobileImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
+                    media: "(max-width: 760px)",
+                    srcSet: event.mobileImage
+                }, void 0, false, {
+                    fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
+                    lineNumber: 28,
+                    columnNumber: 11
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                    className: "nocturne-artwork-image",
+                    src: event.desktopImage,
+                    alt: `${event.title} event artwork`,
+                    style: {
+                        objectPosition: event.imagePosition ?? 'center'
+                    }
+                }, void 0, false, {
+                    fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
+                    lineNumber: 33,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-            lineNumber: 25,
+            lineNumber: 26,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 5
     }, this);
 }
@@ -812,20 +839,10 @@ function TicketLink({ event }) {
         href: event.ticketUrl,
         target: "_blank",
         rel: "noopener noreferrer",
-        children: [
-            "TICKETS ",
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                "aria-hidden": "true",
-                children: "↗"
-            }, void 0, false, {
-                fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 47,
-                columnNumber: 15
-            }, this)
-        ]
-    }, void 0, true, {
+        children: "TICKETS"
+    }, void 0, false, {
         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-        lineNumber: 41,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }
@@ -838,14 +855,14 @@ function EventDetails({ event }) {
                 children: formatNocturneDate(event.date)
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 55,
+                lineNumber: 64,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 children: event.title
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 59,
+                lineNumber: 68,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -853,7 +870,7 @@ function EventDetails({ event }) {
                 children: event.venue
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 60,
+                lineNumber: 69,
                 columnNumber: 7
             }, this),
             event.lineup.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -861,18 +878,42 @@ function EventDetails({ event }) {
                 children: event.lineup.join(' / ')
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 63,
+                lineNumber: 72,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-        lineNumber: 54,
+        lineNumber: 63,
         columnNumber: 5
     }, this);
 }
 function EventCarousel({ items, emptyMessage }) {
     const carouselRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [canScrollLeft, setCanScrollLeft] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [canScrollRight, setCanScrollRight] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const carousel = carouselRef.current;
+        if (!carousel) return;
+        const updateControls = ()=>{
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            setCanScrollLeft(carousel.scrollLeft > 1);
+            setCanScrollRight(maxScroll - carousel.scrollLeft > 1);
+        };
+        updateControls();
+        carousel.addEventListener('scroll', updateControls, {
+            passive: true
+        });
+        const observer = new ResizeObserver(updateControls);
+        observer.observe(carousel);
+        Array.from(carousel.children).forEach((child)=>observer.observe(child));
+        return ()=>{
+            carousel.removeEventListener('scroll', updateControls);
+            observer.disconnect();
+        };
+    }, [
+        items
+    ]);
     const moveCarousel = (direction)=>{
         const carousel = carouselRef.current;
         if (!carousel) return;
@@ -889,41 +930,41 @@ function EventCarousel({ items, emptyMessage }) {
             children: emptyMessage
         }, void 0, false, {
             fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-            lineNumber: 99,
+            lineNumber: 140,
             columnNumber: 12
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "nocturne-carousel-wrap",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            (canScrollLeft || canScrollRight) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "nocturne-carousel-controls",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    canScrollLeft && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "button",
                         onClick: ()=>moveCarousel(-1),
                         "aria-label": "Previous event",
                         children: "←"
                     }, void 0, false, {
                         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                        lineNumber: 105,
-                        columnNumber: 9
+                        lineNumber: 148,
+                        columnNumber: 13
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    canScrollRight && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         type: "button",
                         onClick: ()=>moveCarousel(1),
                         "aria-label": "Next event",
                         children: "→"
                     }, void 0, false, {
                         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                        lineNumber: 113,
-                        columnNumber: 9
+                        lineNumber: 158,
+                        columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 104,
-                columnNumber: 7
+                lineNumber: 146,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "nocturne-event-carousel",
@@ -935,7 +976,7 @@ function EventCarousel({ items, emptyMessage }) {
                                 event: event
                             }, void 0, false, {
                                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                                lineNumber: 125,
+                                lineNumber: 172,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -945,37 +986,37 @@ function EventCarousel({ items, emptyMessage }) {
                                         event: event
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 175,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TicketLink, {
                                         event: event
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                                        lineNumber: 129,
+                                        lineNumber: 176,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                                lineNumber: 127,
+                                lineNumber: 174,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, event.id, true, {
                         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                        lineNumber: 124,
+                        lineNumber: 171,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 122,
+                lineNumber: 169,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-        lineNumber: 103,
+        lineNumber: 144,
         columnNumber: 5
     }, this);
 }
@@ -988,27 +1029,27 @@ function LoadingDots() {
                 children: "."
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 141,
+                lineNumber: 188,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 children: "."
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 142,
+                lineNumber: 189,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 children: "."
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-                lineNumber: 143,
+                lineNumber: 190,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/NocturneShared/EventUI.tsx",
-        lineNumber: 140,
+        lineNumber: 187,
         columnNumber: 5
     }, this);
 }
@@ -1102,17 +1143,20 @@ __turbopack_context__.s([
 ]);
 const events = [
     {
-        id: 'halloween-2026',
-        title: 'HALLOWEEN',
-        date: '2026-10-31',
-        venue: 'Venue TBA',
+        id: 'hard-dnb-2026',
+        title: 'HARD DNB',
+        date: '2026-11-13',
+        venue: 'Bad Decisions, Fitzroy',
         lineup: [
-            'Artist TBA',
-            'Artist TBA'
+            'Asteria',
+            'HLDUBZ',
+            'Phoenix',
+            'Stackpackers',
+            'Strafe'
         ],
         desktopImage: '/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg',
         mobileImage: '/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg',
-        ticketUrl: 'https://ra.co/events/2243135'
+        ticketUrl: 'https://nocturne-hard-dnb-13-nov-26.eventbrite.com.au/'
     },
     {
         id: 'night-shift',
