@@ -60,9 +60,9 @@ button:focus-visible, a:focus-visible {
   object-position: center;
   pointer-events: none;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 146px);
   position: absolute;
-  inset: 0;
+  inset: 88px 0 58px;
 }
 
 .nocturne-video-shade {
@@ -70,7 +70,7 @@ button:focus-visible, a:focus-visible {
   pointer-events: none;
   background: linear-gradient(90deg, #080908db 0%, #080908a6 48%, #08090873 100%), linear-gradient(#08090899 0%, #0000 30% 70%, #080908b8 100%);
   position: absolute;
-  inset: 0;
+  inset: 88px 0 58px;
 }
 
 .nocturne-header {
@@ -87,20 +87,20 @@ button:focus-visible, a:focus-visible {
   position: relative;
 }
 
-.nocturne-wordmark {
-  color: var(--white);
-  letter-spacing: -.07em;
-  cursor: pointer;
+.nocturne-logo {
+  object-fit: contain;
+  object-position: left center;
+  width: 125px;
+  max-width: 100%;
+  height: 36px;
+  box-shadow: none;
+  filter: none;
+  mix-blend-mode: normal;
   background: none;
   border: 0;
+  flex-shrink: 0;
   justify-self: start;
-  padding: 0;
-  font-size: clamp(21px, 2vw, 29px);
-  font-weight: 900;
-}
-
-.nocturne-wordmark span {
-  color: var(--lime);
+  display: block;
 }
 
 .nocturne-tabs {
@@ -165,6 +165,10 @@ button:focus-visible, a:focus-visible {
   font-weight: 700;
 }
 
+.nocturne-menu-toggle {
+  display: none;
+}
+
 .nocturne-screen {
   z-index: 1;
   perspective: 1500px;
@@ -173,7 +177,7 @@ button:focus-visible, a:focus-visible {
   width: 100%;
   min-height: 0;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .nocturne-cube {
@@ -198,7 +202,7 @@ button:focus-visible, a:focus-visible {
   min-width: 0;
   height: 100%;
   min-height: 0;
-  padding: 34px clamp(24px, 8vw, 128px) 24px;
+  padding: 0;
   display: flex;
   position: absolute;
   inset: 0;
@@ -211,6 +215,7 @@ button:focus-visible, a:focus-visible {
 
 .nocturne-face-home {
   background: linear-gradient(115deg, #080908d6, #08090859),
+    url("/img/backgrounds/bg-2.jpg") center center / cover no-repeat,
     var(--black);
 }
 
@@ -335,29 +340,9 @@ button:focus-visible, a:focus-visible {
   position: relative;
 }
 
-.nocturne-footer-arrows {
-  gap: 8px;
-  display: flex;
-}
-
-.nocturne-footer-arrows button {
-  width: 34px;
-  height: 30px;
-  color: var(--lime);
-  cursor: pointer;
-  background: none;
-  border: 1px solid #dfff0099;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  font-size: 18px;
-  transition: background .18s, color .18s;
-  display: flex;
-}
-
-.nocturne-footer-arrows button:hover {
-  background: var(--lime);
-  color: var(--black);
+.nocturne-footer-copyright {
+  color: var(--white);
+  animation: none;
 }
 
 @media (max-width: 1000px) and (min-width: 761px) {
@@ -375,8 +360,10 @@ button:focus-visible, a:focus-visible {
     font-size: 9px;
   }
 
-  .nocturne-cube-face {
-    padding: 30px 42px 22px;
+  .nocturne-background-video, .nocturne-video-shade {
+    height: auto;
+    top: 88px;
+    bottom: 58px;
   }
 }
 
@@ -385,43 +372,140 @@ button:focus-visible, a:focus-visible {
     min-height: 0;
   }
 
+  .nocturne-background-video, .nocturne-video-shade {
+    height: auto;
+    top: 76px;
+    bottom: 48px;
+  }
+
   .nocturne-video-shade {
     background: linear-gradient(#080908c7 0%, #08090894 45%, #080908d4 100%);
   }
 
   .nocturne-header {
-    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    grid-template-columns: minmax(0, 1fr) 40px;
     gap: 12px;
-    min-height: 104px;
-    padding: 10px 18px 0;
+    min-height: 76px;
+    padding: 0 18px;
   }
 
-  .nocturne-wordmark {
-    font-size: 24px;
-  }
-
-  .nocturne-tabs {
-    grid-area: 2 / 1 / auto / -1;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    height: 38px;
-  }
-
-  .nocturne-tabs button {
-    letter-spacing: .04em;
-    gap: 5px;
-    font-size: 9px;
-  }
-
-  .nocturne-tab-number {
-    display: none;
+  .nocturne-logo {
+    width: 125px;
+    height: 36px;
   }
 
   .nocturne-location {
-    letter-spacing: .1em;
+    display: none;
+  }
+
+  .nocturne-menu-toggle {
+    width: 40px;
+    height: 40px;
+    box-shadow: none;
+    cursor: pointer;
+    z-index: 32;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    flex-direction: column;
     grid-area: 1 / 2;
-    font-size: 8px;
+    justify-content: center;
+    justify-self: end;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 8px;
+    display: flex;
+  }
+
+  .nocturne-menu-toggle span {
+    background: var(--white);
+    flex: 0 0 2px;
+    width: 22px;
+    height: 2px;
+    transition: transform .2s, opacity .2s;
+    display: block;
+  }
+
+  .nocturne-menu-toggle[aria-expanded="true"] span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nocturne-menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nocturne-menu-toggle[aria-expanded="true"] span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nocturne-tabs {
+    display: none;
+  }
+
+  .nocturne-tabs.menu-open {
+    z-index: 31;
+    -webkit-backdrop-filter: blur(14px);
+    background: #080908f7;
+    border: 1px solid #f0f0e833;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    width: min(260px, 100vw - 36px);
+    height: auto;
+    max-height: calc(100dvh - 100px);
+    padding: 10px 20px;
+    display: flex;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: auto;
+    right: 18px;
+    overflow-y: auto;
+    box-shadow: 0 12px 32px #00000059;
+  }
+
+  .nocturne-tabs.menu-open button {
+    color: #f0f0e8b8;
+    text-align: left;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #f0f0e81f;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: auto;
+    min-height: 48px;
+    padding: 14px 0;
+    font-size: 10px;
+    display: flex;
+  }
+
+  .nocturne-tabs.menu-open button:last-child {
+    border-bottom: 0;
+  }
+
+  .nocturne-tabs.menu-open button:after {
+    display: none;
+  }
+
+  .nocturne-tabs.menu-open button.active {
+    color: var(--white);
+  }
+
+  .nocturne-tabs.menu-open button.active:before {
+    background: var(--lime);
+    content: "";
+    width: 3px;
+    height: 16px;
+  }
+
+  .nocturne-tabs.menu-open .nocturne-tab-number {
+    min-width: 20px;
+    color: var(--lime);
+    display: inline-block;
   }
 
   .nocturne-cube {
@@ -429,11 +513,12 @@ button:focus-visible, a:focus-visible {
   }
 
   .nocturne-cube-face {
-    padding: 18px 20px 14px;
+    padding: 0;
   }
 
   .nocturne-list-screen {
     justify-content: center;
+    padding: 18px 20px 14px;
     overflow: hidden;
   }
 
@@ -456,35 +541,25 @@ button:focus-visible, a:focus-visible {
     padding: 0 18px;
     font-size: 8px;
   }
-
-  .nocturne-footer-arrows {
-    gap: 5px;
-  }
-
-  .nocturne-footer-arrows button {
-    width: 30px;
-    height: 28px;
-    font-size: 16px;
-  }
 }
 
 @media (max-width: 760px) and (max-height: 700px) {
   .nocturne-header {
-    min-height: 96px;
-  }
-
-  .nocturne-cube-face {
-    padding-top: 10px;
-    padding-bottom: 8px;
+    min-height: 68px;
   }
 
   .nocturne-footer {
     min-height: 42px;
   }
+
+  .nocturne-background-video, .nocturne-video-shade {
+    top: 68px;
+    bottom: 42px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .nocturne-cube {
+  .nocturne-cube, .nocturne-menu-toggle span {
     transition: none;
   }
 }

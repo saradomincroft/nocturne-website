@@ -46,8 +46,8 @@ export default function NocturneLayout({
   const [todayKey, setTodayKey] = useState(initialDateKey);
   const [activeTab, setActiveTab] = useState<Tab>('home');
   const [cubeRotation, setCubeRotation] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Keep the current tab available immediately, even during rapid clicks.
   const activeTabRef = useRef<Tab>('home');
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
@@ -79,12 +79,14 @@ export default function NocturneLayout({
   const navigateToTab = useCallback((nextTab: Tab) => {
     const currentTab = activeTabRef.current;
 
-    if (currentTab === nextTab) return;
+    if (currentTab === nextTab) {
+      setIsMenuOpen(false);
+      return;
+    }
 
     const currentIndex = tabs.indexOf(currentTab);
     const nextIndex = tabs.indexOf(nextTab);
 
-    // Always rotate by the shortest route around the cube.
     let difference = nextIndex - currentIndex;
 
     if (difference > 2) difference -= tabs.length;
@@ -93,6 +95,7 @@ export default function NocturneLayout({
     activeTabRef.current = nextTab;
     setActiveTab(nextTab);
     setCubeRotation((rotation) => rotation + difference);
+    setIsMenuOpen(false);
   }, []);
 
   const changeTab = useCallback((direction: -1 | 1) => {
@@ -105,6 +108,7 @@ export default function NocturneLayout({
     activeTabRef.current = nextTab;
     setActiveTab(nextTab);
     setCubeRotation((rotation) => rotation + direction);
+    setIsMenuOpen(false);
   }, []);
 
   const handleTouchStart = (event: TouchEvent<HTMLElement>) => {
@@ -169,7 +173,17 @@ export default function NocturneLayout({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [changeTab]);
 
-  // IMPORTANT: this connects the rotation state to the actual cube.
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMenuOpen(false);
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isMenuOpen]);
+
   const cubeStyle = {
     '--cube-rotation': `${cubeRotation * -90}deg`,
   } as CSSProperties;
@@ -196,16 +210,17 @@ export default function NocturneLayout({
       <div className="nocturne-video-shade" aria-hidden="true" />
 
       <header className="nocturne-header">
-        <button
-          className="nocturne-wordmark"
-          type="button"
-          aria-label="Go to Home"
-          onClick={() => navigateToTab('home')}
-        >
-          NOCTURNE<span>.</span>
-        </button>
+        <img
+          src="/img/nocturne-lettering.svg"
+          alt="Nocturne"
+          className="nocturne-logo"
+        />
 
-        <nav className="nocturne-tabs" aria-label="Main navigation">
+        <nav
+          id="nocturne-mobile-navigation"
+          className={`nocturne-tabs ${isMenuOpen ? 'menu-open' : ''}`}
+          aria-label="Main navigation"
+        >
           {tabs.map((tab, index) => (
             <button
               type="button"
@@ -223,6 +238,19 @@ export default function NocturneLayout({
         </nav>
 
         <span className="nocturne-location">MELBOURNE, AU</span>
+
+        <button
+          type="button"
+          className="nocturne-menu-toggle"
+          aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isMenuOpen}
+          aria-controls="nocturne-mobile-navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </header>
 
       <div className="nocturne-screen">
@@ -261,26 +289,9 @@ export default function NocturneLayout({
       </div>
 
       <footer className="nocturne-footer">
-        <span>NOCTURNE</span>
-        <span>DRUM &amp; BASS</span>
-
-        <div className="nocturne-footer-arrows">
-          <button
-            type="button"
-            aria-label="Previous tab"
-            onClick={() => changeTab(-1)}
-          >
-            ←
-          </button>
-
-          <button
-            type="button"
-            aria-label="Next tab"
-            onClick={() => changeTab(1)}
-          >
-            →
-          </button>
-        </div>
+        <span className="nocturne-footer-copyright">
+          NOCTURNE RAVERS © {new Date().getFullYear()}
+        </span>
       </footer>
     </main>
   );

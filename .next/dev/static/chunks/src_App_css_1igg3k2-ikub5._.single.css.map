@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/App.css"],"sourcesContent":["/* App.css */\n/* Reset default browser styles */\n/* html, body {\nheight: 100vh;\nwidth: 100vw;\n} */\n\nbody {\n  background-image: url('/img/bg.jpg');\n  background-repeat: repeat;\n  background-size: auto;\n  margin: 0;\n  height: 100vh;\n  width: 100vw;\n  padding: 0;\n  overflow-x: hidden;\n\n}\n\n.tabcontent {\n  margin: 0;\n  padding: 0;\n  background-image: url('/img/bg.jpg');\n}\n"],"names":[],"mappings":"AAOA;;;;;;;;;;;AAYA"}}]
-}

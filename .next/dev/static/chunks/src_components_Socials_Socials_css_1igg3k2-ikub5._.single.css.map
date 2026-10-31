@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/Socials/Socials.css"],"sourcesContent":[".socialsContainer {\n  background-image: url('/public/img/bg.jpg');\n  padding-top: 50px;\n}\n\n.socialsContent {\n  padding: 5px;\n  background-image: url('/public/img/bg.jpg');\n}\n\n.socialsContent ul {\n  padding: 5px;\n  margin: 0;\n  list-style: none;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n}\n\n.socialsLink {\n  width: 50px; /* Reduce the width of each social link */\n}\n\n.socialsLink img {\n  width: 70%;\n  max-width: 70px; /* Reduce the maximum width of the social link images */  height: auto;\n  transition: transform 0.3s;\n}\n\n.socialsLink img:hover {\n  transform: scale(1.1);\n}\n\n@media (max-width: 700px) {\n  .socialsLink {\n    width: 50px; /* Further reduce width for smaller screens */\n  }\n\n  .socialsLink img {\n    max-width: 40px; /* Further reduce image size for smaller screens */\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;AAKA;;;;;AAKA;;;;;;;;;AASA;;;;AAIA;;;;;;;AAMA;;;;AAIA;EACE;;;;EAIA"}}]
-}

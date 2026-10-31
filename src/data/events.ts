@@ -18,7 +18,7 @@ export const events: NocturneEvent[] = [
     title: 'HARD DNB',
     date: '2026-11-13',
     venue: 'Bad Decisions, Fitzroy',
-    lineup: ['Asteria', 'HLDUBZ', 'Phoenix', 'Stackpackers', 'Strafe'],
+    lineup: ['Asteria', 'HLDUBZ', 'Phoenix', 'Stackpackers', 'Strafe', 'UP2'],
     desktopImage: '/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg',
     mobileImage: '/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg',
     ticketUrl: 'https://nocturne-hard-dnb-13-nov-26.eventbrite.com.au/',
