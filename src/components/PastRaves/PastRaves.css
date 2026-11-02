@@ -1,10 +1,224 @@
 
+/* ========================================
+   PAST RAVES SCREEN
+======================================== */
+
+.nocturne-past-screen {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 35px 60px 30px;
+
+  background-image:
+    linear-gradient(
+      rgba(8, 9, 8, 0.72),
+      rgba(8, 9, 8, 0.82)
+    ),
+    url('/img/backgrounds/bg-2.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ========================================
+   HEADING
+======================================== */
+
+.nocturne-past-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 0;
+
+  position: relative;
+  z-index: 5;
+}
+
+.nocturne-past-heading h1 {
+  margin: 0;
+}
+
+
+/* ========================================
+   CAROUSEL
+======================================== */
+
+.nocturne-past-carousel {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  margin: 0;
+  padding: 0 0 16px;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 0;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--lime) var(--charcoal);
+}
+
+.nocturne-past-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.nocturne-past-carousel::-webkit-scrollbar-track {
+  background: var(--charcoal);
+}
+
+.nocturne-past-carousel::-webkit-scrollbar-thumb {
+  background: var(--lime);
+  border-radius: 10px;
+}
+
+/* ========================================
+   POSTER CARDS
+======================================== */
+
+.nocturne-past-carousel {
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0;
+  align-items: flex-start;
+}
+
+.nocturne-past-card {
+  flex: 0 0 58%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+}
+
+.nocturne-past-image-wrap {
+  height: auto;
+  aspect-ratio: 2 / 3;
+}
+
+.nocturne-past-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+/* ========================================
+   SWIPE HINT
+======================================== */
+
 .nocturne-past-screen .nocturne-swipe-hint {
+  margin-top: 12px;
+}
+
+.nocturne-past-empty {
   margin-top: 20px;
 }
 
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .nocturne-past-screen {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .nocturne-past-screen .nocturne-feature-controls {
+    right: 40px;
+  }
+
+  .nocturne-past-card {
+    flex-basis: 42%;
+    height: min(62vh, 560px);
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
 @media (max-width: 760px) {
-  .nocturne-past-screen .nocturne-carousel-controls {
-    margin-bottom: 10px;
+  .nocturne-past-screen {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start !important;
+    align-items: stretch;
+
+    gap: 0 !important;
+    row-gap: 0 !important;
+
+    padding: 28px 24px 24px;
+  }
+
+  .nocturne-past-heading {
+    margin: 0 0 8px !important;
+    padding: 0;
+  }
+
+  .nocturne-past-screen .nocturne-feature-controls {
+    top: 28px;
+    right: 24px;
+  }
+
+  .nocturne-past-carousel {
+    gap: 8px;
+    margin: 0 !important;
+    padding: 0 0 14px;
+  }
+
+  .nocturne-past-card {
+    flex: 0 0 58%;
+    height: min(56vh, 460px);
+  }
+
+  .nocturne-past-screen .nocturne-swipe-hint {
+    margin-top: 12px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .nocturne-past-carousel {
+    scroll-behavior: auto;
+  }
+
+  .nocturne-past-screen .nocturne-feature-controls button {
+    transition: none;
+  }
+}
+@media (max-width: 760px) {
+  .nocturne-past-carousel {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 0;
+  }
+
+  .nocturne-past-card,
+  .nocturne-past-image-wrap {
+    height: auto !important;
+    aspect-ratio: 2 / 3;
+  }
+
+  .nocturne-past-image {
+    display: block;
   }
 }

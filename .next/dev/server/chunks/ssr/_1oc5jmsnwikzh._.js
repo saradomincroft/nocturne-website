@@ -463,9 +463,6 @@ function NocturneLayout({ initialDateKey }) {
     const upcomingEvents = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$events$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["events"].filter((event)=>event.date >= todayKey).sort((a, b)=>a.date.localeCompare(b.date)), [
         todayKey
     ]);
-    const pastEvents = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$events$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["events"].filter((event)=>event.date < todayKey).sort((a, b)=>b.date.localeCompare(a.date)), [
-        todayKey
-    ]);
     const navigateToTab = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])((nextTab)=>{
         const currentTab = activeTabRef.current;
         if (currentTab === nextTab) {
@@ -562,12 +559,12 @@ function NocturneLayout({ initialDateKey }) {
                     type: "video/mp4"
                 }, void 0, false, {
                     fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                    lineNumber: 207,
+                    lineNumber: 199,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                lineNumber: 197,
+                lineNumber: 189,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -575,7 +572,7 @@ function NocturneLayout({ initialDateKey }) {
                 "aria-hidden": "true"
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                lineNumber: 210,
+                lineNumber: 202,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -587,7 +584,7 @@ function NocturneLayout({ initialDateKey }) {
                         className: "nocturne-logo"
                     }, void 0, false, {
                         fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                        lineNumber: 213,
+                        lineNumber: 205,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -608,27 +605,19 @@ function NocturneLayout({ initialDateKey }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                        lineNumber: 232,
+                                        lineNumber: 224,
                                         columnNumber: 15
                                     }, this),
                                     tabLabels[tab]
                                 ]
                             }, tab, true, {
                                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                lineNumber: 225,
+                                lineNumber: 217,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                        lineNumber: 219,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "nocturne-location",
-                        children: "MELBOURNE, AU"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                        lineNumber: 240,
+                        lineNumber: 211,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -641,29 +630,29 @@ function NocturneLayout({ initialDateKey }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                lineNumber: 250,
+                                lineNumber: 242,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                lineNumber: 251,
+                                lineNumber: 243,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {}, void 0, false, {
                                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                lineNumber: 252,
+                                lineNumber: 244,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                        lineNumber: 242,
+                        lineNumber: 234,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                lineNumber: 212,
+                lineNumber: 204,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -687,65 +676,174 @@ function NocturneLayout({ initialDateKey }) {
                                     upcomingEvents: upcomingEvents
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                    lineNumber: 275,
+                                    lineNumber: 267,
                                     columnNumber: 19
                                 }, this),
-                                tab === 'past' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$PastRaves$2f$PastRaves$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    pastEvents: pastEvents
-                                }, void 0, false, {
+                                tab === 'past' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$PastRaves$2f$PastRaves$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                    lineNumber: 279,
-                                    columnNumber: 19
+                                    lineNumber: 271,
+                                    columnNumber: 20
                                 }, this),
                                 tab === 'gallery' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Gallery$2f$Gallery$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                    lineNumber: 282,
+                                    lineNumber: 274,
                                     columnNumber: 39
                                 }, this),
                                 tab === 'contact' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Contact$2f$Contact$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                                    lineNumber: 284,
+                                    lineNumber: 276,
                                     columnNumber: 39
                                 }, this)
                             ]
                         }, tab, true, {
                             fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                            lineNumber: 266,
+                            lineNumber: 258,
                             columnNumber: 15
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                    lineNumber: 257,
+                    lineNumber: 249,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                lineNumber: 256,
+                lineNumber: 248,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
                 className: "nocturne-footer",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                    className: "nocturne-footer-copyright",
-                    children: [
-                        "NOCTURNE RAVERS © ",
-                        new Date().getFullYear()
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                    lineNumber: 292,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "nocturne-footer-copyright",
+                        children: [
+                            "NOCTURNE RAVERS © ",
+                            new Date().getFullYear()
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                        lineNumber: 284,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "nocturne-socials",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "https://www.instagram.com/nocturneravers/",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                "aria-label": "Instagram",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    viewBox: "0 0 24 24",
+                                    "aria-hidden": "true",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("rect", {
+                                            x: "3",
+                                            y: "3",
+                                            width: "18",
+                                            height: "18",
+                                            rx: "5"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                            lineNumber: 295,
+                                            columnNumber: 7
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                                            cx: "12",
+                                            cy: "12",
+                                            r: "4"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                            lineNumber: 296,
+                                            columnNumber: 7
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                                            cx: "18",
+                                            cy: "6",
+                                            r: "1",
+                                            className: "social-icon-fill"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                            lineNumber: 297,
+                                            columnNumber: 7
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                    lineNumber: 294,
+                                    columnNumber: 5
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                lineNumber: 288,
+                                columnNumber: 3
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "https://www.facebook.com/nocturneravers/",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                "aria-label": "Facebook",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    viewBox: "0 0 24 24",
+                                    "aria-hidden": "true",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h1.7V1.4C17 1.2 15.8 1 14.4 1 11.5 1 9.5 2.8 9.5 6v3H6v4h3.5v8H14z"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                        lineNumber: 308,
+                                        columnNumber: 7
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                    lineNumber: 307,
+                                    columnNumber: 5
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                lineNumber: 301,
+                                columnNumber: 3
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "https://www.tiktok.com/@nocturneravers",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                "aria-label": "TikTok",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    viewBox: "0 0 24 24",
+                                    "aria-hidden": "true",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M19.6 6.2a5.8 5.8 0 0 1-3.5-3.5A6.5 6.5 0 0 1 15.8 1h-4.1v14.2a2.8 2.8 0 1 1-2-2.7V8.3a7 7 0 1 0 6.1 6.9V8a9.8 9.8 0 0 0 5.2 1.5V5.4a5.8 5.8 0 0 1-1.4-.2z"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                        lineNumber: 319,
+                                        columnNumber: 7
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                    lineNumber: 318,
+                                    columnNumber: 5
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                                lineNumber: 312,
+                                columnNumber: 3
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
+                        lineNumber: 287,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-                lineNumber: 291,
+                lineNumber: 283,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/NocturneLayout/NocturneLayout.tsx",
-        lineNumber: 192,
+        lineNumber: 184,
         columnNumber: 5
     }, this);
 }
@@ -1047,74 +1145,84 @@ __turbopack_context__.s([
     ()=>PastRaves
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/NocturneShared/EventUI.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$events$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/data/events.ts [app-ssr] (ecmascript)");
+'use client';
 ;
 ;
 ;
-function PastRaves({ pastEvents }) {
+;
+function PastRaves() {
+    const carouselRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const today = new Date();
+    const todayString = [
+        today.getFullYear(),
+        String(today.getMonth() + 1).padStart(2, '0'),
+        String(today.getDate()).padStart(2, '0')
+    ].join('-');
+    const pastEvents = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$events$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["events"].filter((event)=>event.date < todayString).sort((a, b)=>b.date.localeCompare(a.date));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "nocturne-list-screen nocturne-past-screen",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "nocturne-list-heading",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "nocturne-kicker",
-                        children: "THE ARCHIVE"
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
-                        lineNumber: 14,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        children: [
-                            "PAST RAVES",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                children: "."
+                className: "nocturne-past-heading",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                    children: [
+                        "PAST RAVES",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            children: "."
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
+                            lineNumber: 27,
+                            columnNumber: 21
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
+                    lineNumber: 26,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
+                lineNumber: 25,
+                columnNumber: 7
+            }, this),
+            pastEvents.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "nocturne-past-carousel",
+                ref: carouselRef,
+                children: pastEvents.map((event)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
+                        className: "nocturne-past-card",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "nocturne-past-image-wrap",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: event.desktopImage,
+                                alt: `${event.title} event artwork`,
+                                className: "nocturne-past-image",
+                                loading: "lazy"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
-                                lineNumber: 16,
-                                columnNumber: 21
+                                lineNumber: 42,
+                                columnNumber: 17
                             }, this)
-                        ]
-                    }, void 0, true, {
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
+                            lineNumber: 41,
+                            columnNumber: 15
+                        }, this)
+                    }, event.id, false, {
                         fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        children: "Previous events."
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
-                lineNumber: 13,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$NocturneShared$2f$EventUI$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["EventCarousel"], {
-                items: pastEvents,
-                emptyMessage: "The archive is empty for now."
+                        lineNumber: 37,
+                        columnNumber: 13
+                    }, this))
             }, void 0, false, {
                 fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
-                lineNumber: 21,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "nocturne-swipe-hint",
-                children: "SWIPE LEFT / RIGHT TO EXPLORE"
-            }, void 0, false, {
-                fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
-                lineNumber: 26,
-                columnNumber: 7
+                lineNumber: 32,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/PastRaves/PastRaves.tsx",
-        lineNumber: 12,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }
@@ -1128,73 +1236,208 @@ __turbopack_context__.s([
 ]);
 const events = [
     {
-        id: 'hard-dnb-2026',
-        title: 'HARD DNB',
-        date: '2026-11-13',
-        venue: 'Bad Decisions, Fitzroy',
+        id: "hard-dnb-2026",
+        title: "HARD DNB",
+        date: "2026-11-13",
+        venue: "Bad Decisions, Fitzroy",
         lineup: [
-            'Asteria',
-            'HLDUBZ',
-            'Phoenix',
-            'Stackpackers',
-            'Strafe',
-            'UP2'
+            "Asteria",
+            "HLDUBZ",
+            "Phoenix",
+            "Stackpackers",
+            "Strafe",
+            "UP2"
         ],
-        desktopImage: '/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg',
-        mobileImage: '/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg',
-        ticketUrl: 'https://nocturne-hard-dnb-13-nov-26.eventbrite.com.au/'
+        desktopImage: "/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg",
+        mobileImage: "/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg",
+        ticketUrl: "https://nocturne-hard-dnb-13-nov-26.eventbrite.com.au/"
     },
     {
-        id: 'night-shift',
-        title: 'NIGHT SHIFT',
-        date: '2026-11-21',
-        venue: 'Venue TBA',
+        id: "skepsis-and-stackpackers",
+        title: "Skepsis & Stackpackers",
+        date: "2026-05-22",
+        venue: "Sub Club, Melbourne",
         lineup: [
-            'Artist TBA',
-            'Artist TBA'
+            "Skepsis",
+            "Stackpackers",
+            "Hallox",
+            "DailyMayo",
+            "Tsukiyoma"
         ],
-        desktopImage: '/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg',
-        mobileImage: '/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg',
-        ticketUrl: 'https://ra.co/events/'
+        desktopImage: "/img/raves-artwork/desktop/nocturne_skepsis_stackpackers_may_2026-desktop.jpg"
     },
     {
-        id: 'after-hours',
-        title: 'AFTER HOURS',
-        date: '2026-12-12',
-        venue: 'Venue TBA',
+        id: "electropolis-halloween-edition",
+        title: "Electropolis: Halloween Edition",
+        date: "2025-10-31",
+        venue: "QQQ, Melbourne",
         lineup: [
-            'Artist TBA',
-            'Artist TBA'
+            "DailyMayo b2b Stackpackers",
+            "Archive b2b George Giamoukoglou",
+            "Asymmetrik b2b ZS-2000",
+            "Enyo b2b NIIX",
+            "Hallox b2b Tsukiyoma",
+            "Rex the Bard b2b Strafe"
         ],
-        desktopImage: '/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg',
-        mobileImage: '/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg',
-        ticketUrl: 'https://ra.co/events/'
+        desktopImage: "/img/raves-artwork/desktop/nocturne_electropolis_halloween_october_2025-desktop.jpg"
     },
     {
-        id: 'last-entry',
-        title: 'LAST ENTRY',
-        date: '2026-08-15',
-        venue: 'Melbourne',
+        id: "electropolis-dark-liquid-edition",
+        title: "Electropolis: Liquid and Dark Drum and Bass Edition",
+        date: "2025-07-18",
+        venue: "QQQ, Melbourne",
         lineup: [
-            'Artist A',
-            'Artist B'
+            "Stackpackers",
+            "Aaron Static",
+            "Helix",
+            "Bry",
+            "Enyo",
+            "J-Slyde"
         ],
-        desktopImage: '/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg',
-        mobileImage: '/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg',
-        ticketUrl: 'https://ra.co/events/'
+        desktopImage: "/img/raves-artwork/desktop/nocturne_electropolis_liquid_july_2025-desktop.jpg"
     },
     {
-        id: 'no-sleep',
-        title: 'NO SLEEP',
-        date: '2026-07-04',
-        venue: 'Melbourne',
+        id: "basstripper",
+        title: "Basstripper",
+        date: "2025-05-23",
+        venue: "Sub Club, Melbourne",
         lineup: [
-            'Artist C',
-            'Artist D'
+            "Basstripper",
+            "Stackpackers b2b Fagan",
+            "Domain",
+            "Memery",
+            "ZS-2000"
         ],
-        desktopImage: '/img/raves-artwork/desktop/nocturne_hard_dnb_november_2026-desktop.jpg',
-        mobileImage: '/img/raves-artwork/mobile/nocturne_hard_dnb_november_2026-mobile.jpg',
-        ticketUrl: 'https://ra.co/events/'
+        desktopImage: "/img/raves-artwork/desktop/nocturne_basstripper_may_2025-desktop.jpg"
+    },
+    {
+        id: "dux-n-bass",
+        title: "Dux n Bass",
+        date: "2025-02-07",
+        venue: "Laundry, Melbourne",
+        lineup: [
+            "DUX",
+            "Stackpackers",
+            "Aaron Static",
+            "NattyNat",
+            "Clickbait",
+            "Strafe",
+            "Fagan"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_duxnbass_february_2025-desktop.jpg"
+    },
+    {
+        id: "captainbass",
+        title: "Captain Bass",
+        date: "2024-10-25",
+        venue: "Bass Lounge, Melbourne",
+        lineup: [
+            "Captain Bass",
+            "Stackpackers"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_captainbass_october_2024-desktop.jpg"
+    },
+    {
+        id: "qzb",
+        title: "QZB",
+        date: "2024-10-04",
+        venue: "Bass Lounge, Melbourne",
+        lineup: [
+            "QZB",
+            "Stackpackers"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_qzb_october_2024-desktop.jpg"
+    },
+    {
+        id: "crucast",
+        title: "CruCast",
+        date: "2024-08-30",
+        venue: "New Guernica, Melbourne",
+        lineup: [
+            "Skepsis",
+            "Darkzy",
+            "Amplify",
+            "Gina",
+            "Lazcru",
+            "MC AD",
+            "B.O.M",
+            "Stackpackers",
+            "Substitute",
+            "Monkee"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_crucast_august_2024-desktop.jpg"
+    },
+    {
+        id: "eden-festival",
+        title: "Eden Festival",
+        date: "2024-07-26",
+        venue: "Darwin, Northern Territory",
+        lineup: [
+            "Stackpackers"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_eden_july_2024-desktop.jpg"
+    },
+    {
+        id: "house-of-sin",
+        title: "House of Sin",
+        date: "2024-07-12",
+        venue: "Laundry, Melbourne",
+        lineup: [
+            "Sammythesinner",
+            "Stackpackers",
+            "Kritikal",
+            "Clickbait",
+            "Domain"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_houseofsin_july_2024-desktop.jpg"
+    },
+    {
+        id: "flowidus-and-blckout",
+        title: "Flowidus and Blkout.",
+        date: "2024-05-24",
+        venue: "Laundry, Melbourne",
+        lineup: [
+            "Flowidus",
+            "Blkout",
+            "Stackpackers"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_flowidusblkout_may_2024-desktop.jpg"
+    },
+    {
+        id: "bom-and-yussi",
+        title: "B.O.M and Yussi",
+        date: "2024-04-12",
+        venue: "Laundry, Melbourne",
+        lineup: [
+            "B.O.M",
+            "Yussi",
+            "Stackpackers"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_bomyussi_april_2024-desktop.jpg"
+    },
+    {
+        id: "turno-gray-subzero-dreps",
+        title: "Turno and Dreps: Game Time ft Special Guests Sub Zero and Gray",
+        date: "2024-02-11",
+        venue: "Bourke St Courtyard, Melbourne",
+        lineup: [
+            "Turno",
+            "Dreps",
+            "Gray",
+            "Sub Zero"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_turno_february_2024-desktop.jpg"
+    },
+    {
+        id: "keeno",
+        title: "Keeno",
+        date: "2022-07-10",
+        venue: "HooHaa, Melbourne",
+        lineup: [
+            "Keeno",
+            "Stackpackers"
+        ],
+        desktopImage: "/img/raves-artwork/desktop/nocturne_keeno_july_2022-desktop.jpg"
     }
 ];
 }),

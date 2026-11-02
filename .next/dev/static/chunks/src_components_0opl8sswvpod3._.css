@@ -613,13 +613,174 @@
 }
 
 /* [project]/src/components/PastRaves/PastRaves.css [app-client] (css) */
+.nocturne-past-screen {
+  isolation: isolate;
+  background-image: linear-gradient(#080908b8, #080908d1), url("/img/backgrounds/bg-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px 60px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nocturne-past-heading {
+  z-index: 5;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+.nocturne-past-heading h1 {
+  margin: 0;
+}
+
+.nocturne-past-carousel {
+  z-index: 1;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--lime) var(--charcoal);
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0 0 16px;
+  scroll-padding-left: 0;
+  display: flex;
+  position: relative;
+  overflow: auto hidden;
+}
+
+.nocturne-past-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.nocturne-past-carousel::-webkit-scrollbar-track {
+  background: var(--charcoal);
+}
+
+.nocturne-past-carousel::-webkit-scrollbar-thumb {
+  background: var(--lime);
+  border-radius: 10px;
+}
+
+.nocturne-past-carousel {
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.nocturne-past-card {
+  aspect-ratio: 2 / 3;
+  flex: 0 0 58%;
+  height: auto;
+}
+
+.nocturne-past-image-wrap {
+  aspect-ratio: 2 / 3;
+  height: auto;
+}
+
+.nocturne-past-image {
+  object-fit: contain !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .nocturne-past-screen .nocturne-swipe-hint {
+  margin-top: 12px;
+}
+
+.nocturne-past-empty {
   margin-top: 20px;
 }
 
+@media (max-width: 1000px) {
+  .nocturne-past-screen {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .nocturne-past-screen .nocturne-feature-controls {
+    right: 40px;
+  }
+
+  .nocturne-past-card {
+    flex-basis: 42%;
+    height: min(62vh, 560px);
+  }
+}
+
 @media (max-width: 760px) {
-  .nocturne-past-screen .nocturne-carousel-controls {
-    margin-bottom: 10px;
+  .nocturne-past-screen {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 28px 24px 24px;
+    display: flex;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+  }
+
+  .nocturne-past-heading {
+    padding: 0;
+    margin: 0 0 8px !important;
+  }
+
+  .nocturne-past-screen .nocturne-feature-controls {
+    top: 28px;
+    right: 24px;
+  }
+
+  .nocturne-past-carousel {
+    gap: 8px;
+    padding: 0 0 14px;
+    margin: 0 !important;
+  }
+
+  .nocturne-past-card {
+    flex: 0 0 58%;
+    height: min(56vh, 460px);
+  }
+
+  .nocturne-past-screen .nocturne-swipe-hint {
+    margin-top: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nocturne-past-carousel {
+    scroll-behavior: auto;
+  }
+
+  .nocturne-past-screen .nocturne-feature-controls button {
+    transition: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .nocturne-past-carousel {
+    align-items: flex-start;
+    line-height: 0;
+    display: flex;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nocturne-past-card, .nocturne-past-image-wrap {
+    aspect-ratio: 2 / 3;
+    height: auto !important;
+  }
+
+  .nocturne-past-image {
+    display: block;
   }
 }
 
@@ -1322,6 +1483,65 @@ button:focus-visible, a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .nocturne-cube, .nocturne-menu-toggle span {
     transition: none;
+  }
+}
+
+.nocturne-footer {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.nocturne-socials {
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.nocturne-socials a {
+  width: 18px;
+  height: 18px;
+  color: var(--white);
+  opacity: .7;
+  justify-content: center;
+  align-items: center;
+  transition: color .2s, opacity .2s;
+  display: flex;
+}
+
+.nocturne-socials a:hover {
+  color: var(--lime);
+  opacity: 1;
+}
+
+.nocturne-socials svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 16px;
+  height: 16px;
+}
+
+.nocturne-socials a:nth-child(2) svg, .nocturne-socials a:nth-child(3) svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+@media (max-width: 600px) {
+  .nocturne-socials {
+    gap: 12px;
+  }
+
+  .nocturne-socials a {
+    width: 16px;
+    height: 16px;
+  }
+
+  .nocturne-socials svg {
+    width: 15px;
+    height: 15px;
   }
 }
 

@@ -564,4 +564,63 @@ button:focus-visible, a:focus-visible {
   }
 }
 
+.nocturne-footer {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.nocturne-socials {
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+.nocturne-socials a {
+  width: 18px;
+  height: 18px;
+  color: var(--white);
+  opacity: .7;
+  justify-content: center;
+  align-items: center;
+  transition: color .2s, opacity .2s;
+  display: flex;
+}
+
+.nocturne-socials a:hover {
+  color: var(--lime);
+  opacity: 1;
+}
+
+.nocturne-socials svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 16px;
+  height: 16px;
+}
+
+.nocturne-socials a:nth-child(2) svg, .nocturne-socials a:nth-child(3) svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+@media (max-width: 600px) {
+  .nocturne-socials {
+    gap: 12px;
+  }
+
+  .nocturne-socials a {
+    width: 16px;
+    height: 16px;
+  }
+
+  .nocturne-socials svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 /*# sourceMappingURL=src_components_NocturneLayout_NocturneLayout_css_1igg3k2-ikub5._.single.css.map*/

@@ -695,3 +695,63 @@ a:focus-visible {
     transition: none;
   }
 }
+
+.nocturne-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nocturne-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nocturne-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  color: var(--white);
+  opacity: 0.7;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nocturne-socials a:hover {
+  color: var(--lime);
+  opacity: 1;
+}
+
+.nocturne-socials svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nocturne-socials a:nth-child(2) svg,
+.nocturne-socials a:nth-child(3) svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+@media (max-width: 600px) {
+  .nocturne-socials {
+    gap: 12px;
+  }
+
+  .nocturne-socials a {
+    width: 16px;
+    height: 16px;
+  }
+
+  .nocturne-socials svg {
+    width: 15px;
+    height: 15px;
+  }
+}

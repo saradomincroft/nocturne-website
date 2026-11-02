@@ -68,14 +68,6 @@ export default function NocturneLayout({
     [todayKey],
   );
 
-  const pastEvents = useMemo<NocturneEvent[]>(
-    () =>
-      events
-        .filter((event) => event.date < todayKey)
-        .sort((a, b) => b.date.localeCompare(a.date)),
-    [todayKey],
-  );
-
   const navigateToTab = useCallback((nextTab: Tab) => {
     const currentTab = activeTabRef.current;
 
@@ -237,7 +229,7 @@ export default function NocturneLayout({
           ))}
         </nav>
 
-        <span className="nocturne-location">MELBOURNE, AU</span>
+        {/* <span className="nocturne-location">MELBOURNE, AU</span> */}
 
         <button
           type="button"
@@ -276,7 +268,7 @@ export default function NocturneLayout({
                 )}
 
                 {tab === 'past' && (
-                  <PastRaves pastEvents={pastEvents} />
+                   <PastRaves />
                 )}
 
                 {tab === 'gallery' && <Gallery />}
@@ -292,6 +284,42 @@ export default function NocturneLayout({
         <span className="nocturne-footer-copyright">
           NOCTURNE RAVERS © {new Date().getFullYear()}
         </span>
+        <div className="nocturne-socials">
+  <a
+    href="https://www.instagram.com/nocturneravers/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="18" cy="6" r="1" className="social-icon-fill" />
+    </svg>
+  </a>
+
+  <a
+    href="https://www.facebook.com/nocturneravers/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h1.7V1.4C17 1.2 15.8 1 14.4 1 11.5 1 9.5 2.8 9.5 6v3H6v4h3.5v8H14z" />
+    </svg>
+  </a>
+
+  <a
+    href="https://www.tiktok.com/@nocturneravers"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="TikTok"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M19.6 6.2a5.8 5.8 0 0 1-3.5-3.5A6.5 6.5 0 0 1 15.8 1h-4.1v14.2a2.8 2.8 0 1 1-2-2.7V8.3a7 7 0 1 0 6.1 6.9V8a9.8 9.8 0 0 0 5.2 1.5V5.4a5.8 5.8 0 0 1-1.4-.2z" />
+    </svg>
+  </a>
+</div>
       </footer>
     </main>
   );
